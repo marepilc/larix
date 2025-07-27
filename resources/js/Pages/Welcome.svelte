@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { Link } from "@inertiajs/svelte"
+
     export let laravelVersion: string;
     export let phpVersion: string;
 </script>
@@ -8,6 +10,7 @@
 <p>Laravel Version: {laravelVersion}</p>
 <p>PHP Version: {phpVersion}</p>
 <p>Welcome to your new Laravel application!</p>
+<Link href={route('welcome')}>Welcome</Link>
 <p>
     To get started, check out the <a href="https://laravel.com/docs"
         >Laravel documentation</a
