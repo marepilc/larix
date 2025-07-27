@@ -2,12 +2,11 @@ import './bootstrap'
 
 import { createInertiaApp } from '@inertiajs/svelte'
 import { mount } from 'svelte'
-import type { SvelteComponent } from 'svelte'
 
 createInertiaApp({
     resolve: (name) => {
-        const pages = import.meta.glob<{ default: typeof SvelteComponent }>('./Pages/**/*.svelte', { eager: true })
-        return pages[`./Pages/${name}.svelte`]
+        const pages = import.meta.glob('./Pages/**/*.svelte', { eager: true })
+        return pages[`./Pages/${name}.svelte`] as any
     },
     setup({ el, App, props }) {
         if (!el) {

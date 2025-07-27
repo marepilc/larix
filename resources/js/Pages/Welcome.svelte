@@ -1,18 +1,24 @@
 <script lang="ts">
     import { Link } from "@inertiajs/svelte"
-
-    export let laravelVersion: string;
-    export let phpVersion: string;
+    import MainLayout from "@/Layouts/MainLayout.svelte";
+    interface Props {
+        laravelVersion: string;
+        phpVersion: string;
+    
+    }
+    let { laravelVersion, phpVersion }: Props = $props();
 </script>
 
-<h1>Welcome to Laravel</h1>
-
-<p>Laravel Version: {laravelVersion}</p>
-<p>PHP Version: {phpVersion}</p>
-<p>Welcome to your new Laravel application!</p>
-<Link href={route('welcome')}>Welcome</Link>
-<p>
-    To get started, check out the <a href="https://laravel.com/docs"
-        >Laravel documentation</a
-    >.
-</p>
+<MainLayout title="Welcome">
+    <h1>Welcome to Laravel</h1>
+    
+    <p>Laravel Version: {laravelVersion}</p>
+    <p>PHP Version: {phpVersion}</p>
+    <p>Welcome to your new Laravel application!</p>
+    <Link href={route('welcome')}>Welcome</Link>
+    <p>
+        To get started, check out the <a href="https://laravel.com/docs"
+            >Laravel documentation</a
+        >.
+    </p>
+</MainLayout>
