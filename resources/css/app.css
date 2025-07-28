@@ -1,1 +1,19 @@
 @import 'tailwindcss';
+
+@theme {
+    --color-primary: oklch(52.19% 0.278 342.6);
+    --color-danger: oklch(62.92% 0.233 29.23);
+    --color-surface: oklch(94.81% 0.012 257.6);
+    --color-ink: oklch(21.61% 0.022 257.6);
+    --color-surface-hover: oklch(91.19% 0.014 257.6);
+}
+
+@layer theme {
+    .dark {
+        --color-primary: oklab(55.054% 0.22596 -0.06597);
+        --color-danger: oklch(62.92% 0.233 29.23);
+        --color-surface: oklch(32.72% 0.012 257.6);
+        --color-ink: oklch(98.36% 0.004 257.6);
+        --color-surface-hover: oklch(41.52% 0.014 257.6);
+    }
+}

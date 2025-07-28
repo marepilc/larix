@@ -1,7 +1,7 @@
-import './bootstrap'
-
 import { createInertiaApp } from '@inertiajs/svelte'
 import { mount } from 'svelte'
+
+import './bootstrap'
 
 createInertiaApp({
     resolve: (name) => {
