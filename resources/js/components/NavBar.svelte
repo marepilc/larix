@@ -17,7 +17,7 @@
 </script>
 
 <nav class="bg-surface border-secondary sticky top-0 z-50 border-b shadow-sm {className}">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 md:px-6">
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
                 <a
